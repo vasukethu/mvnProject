@@ -5,17 +5,17 @@ pipeline {
         stage ('Complile Stage') {
             steps {
                
-                    sh 'mvn -f vasudata/pom.xml clean package'
+                    sh 'mvn -f MyNew_Pipe_Line_1/pom.xml clean package'
                 }
             }
          stage ('Build Stage') {
             steps {
-                    sh 'mvn -f vasudata/pom.xml clean test'
+                    sh 'mvn -f MyNew_Pipe_Line_1/pom.xml clean test'
                 }
             }
           stage ('Deployment Stage') {
             steps {
-                    sh 'mvn -f vasudata/pom.xml clean deploy'
+                    sh 'mvn -f MyNew_Pipe_Line_1/pom.xml clean deploy'
             }
         }
       
